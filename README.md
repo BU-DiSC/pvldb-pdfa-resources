@@ -12,6 +12,9 @@ This is a collection of resources started as part of the PVLDB Vol 16 Publicatio
 ### Adobe Acrobat for PDF/A
 
 Adobe Acrobat can also save as PDF/A, however, note that this does not always mean that the file is compliant. Rather, it means that the file _claims to be compliant_. More checking is typically necessary. 
++ If you use `File > Save as Other > Archival PDF (PDF/A)` this will *not* ensure PDF/A compliance. In fact most of the time this will not be sufficient.
++ If you use Adobe Preflight to run a "Convert to PDF/A" profile and the process succeeds this will be sufficient. 
+
 
 ### Online tools to check for PDF/A compliance
 + https://www.pdfen.com/pdf-a-validator
