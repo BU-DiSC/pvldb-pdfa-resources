@@ -20,6 +20,7 @@ Adobe Acrobat can also save as PDF/A, however, note that this does not always me
 ### Online tools to check for PDF/A compliance
 + https://www.pdfen.com/pdf-a-validator
 + https://pdf.online/validate-pdfa
++ https://avepdf.com/pdfa-validation
 
 ### Online tools to convert to PDF/A 
 + https://pdf.online/pdf-to-pdfa
