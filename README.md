@@ -2,6 +2,10 @@
 
 This is a collection of resources started as part of the PVLDB Vol 16 Publication Process. It outlines various resources and how-tos regarding achieving PDF/A compliance. This is a live document, so please come back for updated content and feel free to contribute as well.
 
+## LaTeX configuration to embed all fonts
++ Ensure that the options `pdftexDownloadBase14` and `dvipsDownloadBase35` are set to true in your `updmap.cfg` file. In order to ensure that that you are editing the correct file run first `updmap -sys` to see which files are used. 
+
+## LaTeX packages to ensure PDF/A 
 +  In you latex source code use the package `pdfx`. The full documentation of the package is here: https://texdoc.org/serve/pdfx.pdf/0  
 ```
 \usepackage[a-2b]{pdfx})
