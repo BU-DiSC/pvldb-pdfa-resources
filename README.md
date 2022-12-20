@@ -30,3 +30,9 @@ Adobe Acrobat can also save as PDF/A, however, note that this does not always me
 ### Online tools to convert to PDF/A 
 + https://pdf.online/pdf-to-pdfa
 + https://www.ilovepdf.com/convert-pdf-to-pdfa
+
+### Removing Type 3 fonts (this is a best-effort collection of online links)
+Note that typically, if you ensure PDF/A compliance there should be no Type 3 fonts. Just in case, below we have a collection of links solely about removing Type 3 fonts in a more ad hoc manner.
++ https://me.net.nz/post/type3fonts/
++ https://blog.mattoverby.net/2021/07/you-can-remove-type-3-fonts-with.html
++ https://tex.stackexchange.com/questions/18687/how-to-generate-pdf-without-any-type3-fonts
