@@ -20,6 +20,13 @@ Adobe Acrobat can also save as PDF/A, however, note that this does not always me
 + If you use Adobe Preflight to run a "Convert to PDF/A" profile and the process succeeds this will be sufficient. 
   + In the Creative Cloud Suite, this can be found in Adobe Acrobat under `Edit > Preflight` where you can select the profile "Convert to PDF/A-2b" and click on "Analyze and fix". This will open a new dialogue box that will ask you to give the desired output filename.
 
+
+# How to test for PDF/A and font compliance.
+
+## PVLDB Vol 16 Testing Scripts
+The script `check_fonts_pdfa.py` is the same script that the PVLDB Proceedings Chairs use and you can run it in your machine to perform the corresponding checks. 
++ Once you follow the guidelines in [_tools/INSTALL_TOOLS.md] to install the necessary tools, you can simply give `python check_fonts_pdfa.py --dir <directory with pdf files to check>` and all files will be checked for PDF/A ad font compliance 
+
 ## Online tools
 
 ### Online tools to check for PDF/A compliance
