@@ -25,7 +25,7 @@ Adobe Acrobat can also save as PDF/A, however, note that this does not always me
 
 ## PVLDB Vol 16 Testing Scripts
 The script `check_fonts_pdfa.py` is the same script that the PVLDB Proceedings Chairs use and you can run it in your machine to perform the corresponding checks. 
-+ Once you follow the guidelines in [_tools/INSTALL_TOOLS.md] to install the necessary tools, you can simply give `python check_fonts_pdfa.py --dir <directory with pdf files to check>` and all files will be checked for PDF/A ad font compliance 
++ Once you follow the guidelines in [_tools/INSTALL_TOOLS.md](_tools/INSTALL_TOOLS.md) to install the necessary tools, you can simply give `python check_fonts_pdfa.py --dir <directory with pdf files to check>` and all files will be checked for PDF/A and font compliance 
 
 ## Online tools
 
