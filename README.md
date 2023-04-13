@@ -23,11 +23,11 @@ Adobe Acrobat can also save as PDF/A, however, note that this does not always me
 
 # How to test for PDF/A and font compliance.
 
-OK, so you have followed all the above guidelines to make your file compliant. Can you verify with the same tools as the PVLDB Publication Process? To do that we add below a simple version of the testing suite used during publication.
+OK, so you have followed all the above guidelines to make your file compliant. Can you verify with the same tools as the PVLDB Publication Process? To do that, we add below a simple version of the testing suite used during publication.
 
 ## PVLDB Vol 16 Testing Scripts
-The script `check_fonts_pdfa.py` is the same script that the PVLDB Proceedings Chairs use and you can run it in your machine to perform the corresponding checks. 
-+ Once you follow the guidelines in [_tools/INSTALL_TOOLS.md](_tools/INSTALL_TOOLS.md) to install the necessary tools, you can simply give `python check_fonts_pdfa.py --dir <directory with pdf files to check>` and all files will be checked for PDF/A and font compliance 
++ Before you start, follow the guidelines in [_tools/INSTALL_TOOLS.md](_tools/INSTALL_TOOLS.md) to install the necessary tools.
++ Once the tools are installed, you can simply give `python check_fonts_pdfa.py --dir <directory with pdf files to check>` and all files in that folder will be checked for PDF/A and font compliance.
 
 ## Online tools
 
