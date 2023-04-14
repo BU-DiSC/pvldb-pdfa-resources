@@ -1,6 +1,6 @@
 """
 Authors: Lijun Chang, Manos Athanassoulis
-Code adopted from PVLDB16 proceedings scripts
+Code adapted from PVLDB16 proceedings scripts
 """
 #Requires pdffonts, grep, awk, veraPDF
 
