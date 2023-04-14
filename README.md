@@ -27,7 +27,10 @@ OK, so you have followed all the above guidelines to make your file compliant. C
 
 ## PVLDB Vol 16 Testing Scripts
 + Before you start, follow the guidelines in [_tools/INSTALL_TOOLS.md](_tools/INSTALL_TOOLS.md) to install the necessary tools.
-+ Once the tools are installed, you can simply give `python check_fonts_pdfa.py --dir <directory with pdf files to check>` and all files in that folder will be checked for PDF/A and font compliance.
++ Once the tools are installed, you can run the two scripts `check_fonts_pdfa.py` to check fonts and PDF/A compliance and `check_format.py` to check other common formatting errors. 
++ Note that these are not exhaustive!
++ Give `python check_fonts_pdfa.py --dir <directory with pdf files to check>` and all files in that folder will be checked for PDF/A and font compliance.
++ Give `python check_format.py --dir <directory with pdf files to check>` and all files in that folder will be checked for common formatting errors.
 
 ## Online tools
 

@@ -4,6 +4,11 @@ This process has been tested with macOS 13.3.
 
 ## Configuring Tools 
 + install python
++ Install PyPDF2 (needed for pdf-import.py)
+
+```
+pip3 install PyPDF2
+```
 
 ## VeraPDF
 + Install veraPDF (for PDF/A compliance check)
