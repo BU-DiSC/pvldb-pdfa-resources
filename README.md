@@ -6,6 +6,10 @@ This is a collection of resources started as part of the PVLDB Vol 16 Publicatio
 + Ensure that the options `pdftexDownloadBase14` and `dvipsDownloadBase35` are set to true in your `updmap.cfg` file. In order to ensure that that you are editing the correct file run first `updmap -sys` to see which files are used. 
 
 ## LaTeX packages to ensure PDF/A 
++  Modify the documentclass to include pdfa, for example:
+```
+\documentclass[sigconf, nonacm, pdfa]{acmart}
+```
 +  In you latex source code use the package `pdfx`. The full documentation of the package is here: https://texdoc.org/serve/pdfx.pdf/0  
 ```
 \usepackage[a-2b]{pdfx})
