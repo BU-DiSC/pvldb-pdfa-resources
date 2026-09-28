@@ -27,11 +27,11 @@ for f in sorted(os.listdir(folder)):
     print("\tCheck file %s" % path)
 
     exception=0
-    pdf_document = pypdf.PdfFileReader(path, strict=False)
-    pdf_pages = pdf_document.getNumPages()
+    pdf_document = pypdf.PdfReader(path, strict=False)
+    pdf_pages = len(pdf_document.pages)
     
-    first_page = pdf_document.getPage(0)
-    plaintext = first_page.extractText()
+    first_page = pdf_document.pages[0]
+    plaintext = first_page.extract_text()
     plaintext = re.sub('˙', 'ff', plaintext)
     plaintext = re.sub('˛', 'tt', plaintext)
     plaintext = re.sub('˚', 'Qu', plaintext)
@@ -70,7 +70,7 @@ for f in sorted(os.listdir(folder)):
 
     full_paper=plaintext
     for p in range (1,pdf_pages-1):
-        full_paper=full_paper+pdf_document.getPage(p).extractText()
+        full_paper=full_paper+pdf_document.pages[p].extract_text()
     # if 'ACKNOWLEDGMENTS' in full_paper:
         # print("\t%d: acck found" % paper_id)
     if 'Acknowledgments' in full_paper:

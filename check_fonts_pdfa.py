@@ -66,7 +66,7 @@ for f in sorted(os.listdir(folder)):
         count = count + 1
         fonts = fonts + 1
     
-    missing_fonts=int(subprocess.check_output(["pdffonts \""+path+"\" | grep \"no\s*no\" | grep -v \"yes\s*no\s*no\" | awk 'BEGIN{mf=0}{mf++}END{print mf}'"],shell=True))
+    missing_fonts=int(subprocess.check_output(["pdffonts \""+path+"\" | grep \"no\\s*no\" | grep -v \"yes\\s*no\\s*no\" | awk 'BEGIN{mf=0}{mf++}END{print mf}'"],shell=True))
     if missing_fonts>0:
         print("... has %d missing fonts" % missing_fonts)
         cur_paper_corrections=cur_paper_corrections+"#("+chr(ord(start) + count)+") "+message_embed_fonts
@@ -120,7 +120,7 @@ for f in sorted(os.listdir(folder)):
         continue
     # print(["pdffonts " + path + " | grep \"no\s*no\" | grep -v \"yes\s*no\s*no\" | awk 'BEGIN{mf=0}{mf++}END{print mf}'"])
     # missing_fonts=subprocess.call(["pdffonts "+path+" | grep \"no\s*no\" | grep -v \"yes\s*no\s*no\" | awk 'BEGIN{mf=0}{mf++}END{print mf}'"],shell=True)
-    missing_fonts=int(subprocess.check_output(["pdffonts \""+path+"\" | grep \"no\s*no\" | grep -v \"yes\s*no\s*no\" | awk 'BEGIN{mf=0}{mf++}END{print mf}'"],shell=True))
+    missing_fonts=int(subprocess.check_output(["pdffonts \""+path+"\" | grep \"no\\s*no\" | grep -v \"yes\\s*no\\s*no\" | awk 'BEGIN{mf=0}{mf++}END{print mf}'"],shell=True))
     # print(missing_fonts)
     # print(path)
     if missing_fonts>0:
