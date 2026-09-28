@@ -11,7 +11,8 @@ This repo helps authors make PVLDB camera-ready papers PDF/A compliant, with all
 
 | Path | What it is |
 |---|---|
-| `README.md` | Setup, a minimal example, and how-tos (LaTeX settings, Acrobat, online validators) |
+| `README.md` | Setup and a minimal example |
+| `PDFA-how-to.md` | How-tos: LaTeX settings, Acrobat, testing scripts, online validators, removing Type 3 fonts |
 | `VLDB-formatting.md` | Camera-ready formatting rules (page limits, author blocks, and so on) |
 | `_tools/INSTALL_TOOLS.md` | Detailed install notes for the tools |
 | `check_fonts_pdfa.py` | veraPDF PDF/A check, Type 3 font check, unembedded font check. Writes `corrections.txt` |
@@ -76,7 +77,7 @@ _tools/veraPDF/verapdf --flavour 2b --format mrr paper.pdf | grep -E 'status="fa
   \hypersetup{pdfapart=2,pdfaconformance=b}
   ```
   Declaring a level the file does not actually pass only changes its claim. Always re-run veraPDF against the declared level.
-- **Template setup:** `\documentclass[sigconf, nonacm, pdfa]{acmart}` or `\usepackage[a-2b]{pdfx}`. See the README for details.
+- **Template setup:** `\documentclass[sigconf, nonacm, pdfa]{acmart}` or `\usepackage[a-2b]{pdfx}`. See `PDFA-how-to.md` for details.
 - **Acrobat's "Save as PDF/A"** only makes the file claim compliance. Use Preflight's "Convert to PDF/A-2b" instead.
 
 ### "contains Type 3 fonts" or "has N missing fonts"
@@ -101,4 +102,4 @@ These are text heuristics run on the first page and body. Check each one against
 ## Gotchas
 - **`env: python3\r: No such file or directory`:** the script has Windows (CRLF) line endings. Convert it to LF, for example with `perl -pi -e 's/\r$//' check_*.py`.
 - **The checks are not exhaustive.** A pass here does not guarantee acceptance, so also go through `VLDB-formatting.md`.
-- **Online validators** (listed in the README) are a useful second opinion when veraPDF and another tool disagree.
+- **Online validators** (listed in `PDFA-how-to.md`) are a useful second opinion when veraPDF and another tool disagree.
