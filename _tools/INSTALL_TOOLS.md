@@ -19,7 +19,7 @@ pip3 install PyPDF2
 mkdir veraPDF-download; cd veraPDF-download
 wget https://software.verapdf.org/rel/verapdf-installer.zip
 unzip verapdf-installer.zip
-cd verapdf-greenfield-1.22.3
+cd verapdf-greenfield-*
 ./verapdf-install
 ```
     

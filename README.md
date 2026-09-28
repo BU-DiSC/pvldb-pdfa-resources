@@ -1,8 +1,10 @@
 # How to ensure PDF/A compliance
 
-This is a collection of resources started as part of the PVLDB Vol 16 Publication Process. It outlines various resources and how-tos regarding achieving PDF/A compliance. This is a live document, so please come back for updated content and feel free to contribute as well.
+This is a collection of resources started as part of the PVLDB Vol 16 Publication Process. It primarily hosts tool to check PDF/A compliance and also include various resources and how-tos regarding achieving PDF/A compliance. 
 
-# Getting started
+> Note: This is a live document, so please check back for updated content and feel free to contribute as well.
+
+# Getting started with the tools to check PDF/A compliance
 
 ## Set up the tools
 The checking scripts need Python 3 with PyPDF2, poppler (for `pdffonts`) and veraPDF (which needs Java). More details are in [_tools/INSTALL_TOOLS.md](_tools/INSTALL_TOOLS.md).
