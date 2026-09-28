@@ -1,4 +1,6 @@
+.DS_Store
 _tools/veraPDF
 _tools/veraPDF-download
 pdfs
 corrections.txt
+_testdir

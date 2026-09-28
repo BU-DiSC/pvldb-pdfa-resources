@@ -28,8 +28,19 @@ args = parser.parse_args()
 
 import os
 import subprocess
+import sys
 
 folder = args.dir
+
+if not os.path.isdir(folder):
+    if folder != parser.get_default('dir'):
+        sys.exit("Error: folder %s does not exist." % folder)
+    os.makedirs(folder)
+    print("Created folder %s -- add the PDFs to check there and rerun." % folder)
+    sys.exit(0)
+if not any(f.lower().endswith(".pdf") for f in os.listdir(folder)):
+    print("No PDF files found in %s -- nothing to check." % folder)
+    sys.exit(0)
 
 print("Iterate over all files for PDF/A and Fonts in folder: %s" % folder)
 message_pdfa="File is not PDF/A compliant. More details on making a file PDF/A compliant are here: https://github.com/BU-DiSC/pvldb-pdfa-resources."

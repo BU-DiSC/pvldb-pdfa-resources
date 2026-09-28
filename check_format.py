@@ -8,6 +8,7 @@ import argparse
 import re
 import PyPDF2 as pypdf # this one still seems to be maintained
 import os
+import sys
 
 
 parser = argparse.ArgumentParser(description='Check some common formatting issues',
@@ -18,6 +19,16 @@ parser.add_argument('--dir', action='store',
 
 args = parser.parse_args()
 folder = args.dir
+
+if not os.path.isdir(folder):
+    if folder != parser.get_default('dir'):
+        sys.exit("Error: folder %s does not exist." % folder)
+    os.makedirs(folder)
+    print("Created folder %s -- add the PDFs to check there and rerun." % folder)
+    sys.exit(0)
+if not any(f.lower().endswith(".pdf") for f in os.listdir(folder)):
+    print("No PDF files found in %s -- nothing to check." % folder)
+    sys.exit(0)
 
 print("Check formatting of all files in folder: %s" % folder)
 
