@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Authors: Lijun Chang, Manos Athanassoulis
 Code adapted from PVLDB16 proceedings scripts
@@ -9,13 +10,16 @@ import PyPDF2 as pypdf # this one still seems to be maintained
 import os
 
 
-parser = argparse.ArgumentParser(description='Check some common formatting issues')
+parser = argparse.ArgumentParser(description='Check some common formatting issues',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 parser.add_argument('--dir', action='store',
-                    help='Folder containing PDFs', required=True)
+                    help='Folder containing PDFs', required=False, default="_testdir")
 
 args = parser.parse_args()
 folder = args.dir
+
+print("Check formatting of all files in folder: %s" % folder)
 
 
 

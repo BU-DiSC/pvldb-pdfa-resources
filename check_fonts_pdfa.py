@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Authors: Lijun Chang, Manos Athanassoulis
 Code adapted from PVLDB16 proceedings scripts
@@ -7,19 +8,20 @@ Code adapted from PVLDB16 proceedings scripts
 import argparse
 import subprocess
 
-parser = argparse.ArgumentParser(description='Check whether all fonts are embedded and file is PDF/A compliant')
+parser = argparse.ArgumentParser(description='Check whether all fonts are embedded and file is PDF/A compliant',
+                                 formatter_class=argparse.ArgumentDefaultsHelpFormatter)
 
 parser.add_argument('--dir', action='store',
-                    help='Folder containing PDFs', required=True)
+                    help='Folder containing PDFs', required=False, default="_testdir")
 
 parser.add_argument('--veraPDFpath', action='store',
                     help='Folder containing veraPDF', required=False, default="_tools/veraPDF")
 
 parser.add_argument('--corr_filename', action='store',
-                    help='File containing the automated corrections veraPDF (def: corrections.txt)', required=False, default="corrections.txt")
+                    help='File containing the automated corrections veraPDF', required=False, default="corrections.txt")
 
 parser.add_argument('--corr_path', action='store',
-                    help='Path containing the automated corrections veraPDF (def: CRC-Corrections)', required=False, default=".")
+                    help='Path containing the automated corrections veraPDF', required=False, default=".")
 
 
 args = parser.parse_args()
@@ -29,7 +31,7 @@ import subprocess
 
 folder = args.dir
 
-print("Iterate over all files for PDF/A and Fonts")
+print("Iterate over all files for PDF/A and Fonts in folder: %s" % folder)
 message_pdfa="File is not PDF/A compliant. More details on making a file PDF/A compliant are here: https://github.com/BU-DiSC/pvldb-pdfa-resources."
 message_embed_fonts="Not all fonts are embedded. Please embed all fonts. "
 message_type3_fonts="Please remove any Type 3 fonts you have in the PDF. "
