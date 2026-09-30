@@ -1,11 +1,13 @@
-## VLDB Vol 16 Formatting
+## VLDB Vol 20 Formatting
+The camera-ready (CRC) submission happens in two rounds. The instructions below are for the first round. In the second round you update the pages and DOI metadata (see [Final CR](#final-cr)).
+
 + Paper length:
-  + The maximum paper length is 12 pages for regular research papers, experimental evaluation papers and industry track papers, 8 pages for scalable data science papers, and 6 pages for vision papers. All the content, including any appendices and acknowledgements but excluding the references, must fit on these 12, 8, and 6 pages, respectively. Only the references can extend a paper beyond the page limit, and there is no limit on the number of pages used for them.
+  + The maximum paper length is 12 pages for Regular Research Papers and Experiment, Analysis & Benchmark Papers, 8 pages for Scalable Data Science Papers, and 6 pages for Vision Papers. All the content, including any appendices and acknowledgements but excluding the references, must fit on these 12, 8, and 6 pages, respectively. Only the references can extend a paper beyond the page limit, and there is no limit on the number of pages used for them.
   + The maximum paper length is 4 pages for tutorial and demo track papers. All the content must fit on these 4 pages.
   
-+ Make sure that you use the most recent version of the template (see https://vldb.org/pvldb/volumes/16/formatting). If your template misses certain required tags/commands, if it shows unbalanced references or if it displays page headers you are probably using an outdated/wrong template.
++ Make sure that you use the most recent version of the template (see https://vldb.org/pvldb/volumes/20/formatting). If your template misses certain required tags/commands, if it shows unbalanced references or if it displays page headers you are probably using an outdated/wrong template.
 
-+ Please make sure that your camera-ready paper follows the formatting guidelines according to the Camera Ready formatting instructions on https://vldb.org/pvldb/volumes/16/formatting which cannot be enforced by the template. Please also check that the paper:
++ Please make sure that your camera-ready paper follows the formatting guidelines according to the Camera Ready formatting instructions on https://vldb.org/pvldb/volumes/20/formatting which cannot be enforced by the template. Please also check that the paper:
 
   + contains no citations or footnotes in the Abstract.
   + does not show any footnotes (1,2,3,...) or symbols (*,°,^,<dagger>,...) in the PVLDB Reference Format block (these often come from markings in the title and do not belong in the reference format).
@@ -27,7 +29,7 @@
 
 + Remove the page numbers in your paper by setting: \vldbpagestyle{empty}
 
-+ Check that the Volume number is 16, the Issue number and the year are the ones provided in the email in your paper's PVLDB Reference Format and copyright blocks.
++ Check that the Volume number is 20, the Issue number and the year are the ones provided in the email in your paper's PVLDB Reference Format and copyright blocks.
 
 + Add a URL pointing to the (code) artifacts of your paper in the \vldbavailabilityurl{} command or leave the command empty if you have been exempted from submitting the artifacts. Providing a link will create a special paragraph in the paper that highlights the availability of your artifacts. Note that the provided "URL_TO_YOUR_ARTIFACTS" in the template is an example and needs to be deleted or replaced. Please do not keep this in your CRC! Please make sure that the artifacts checked during the review process are available through the link you provide (unless exempted from providing artifacts). With the availability badge, PVLDB seeks to give special credit to transparent research papers that make their artifacts available to the community.
 For details, please see: https://vldb.org/pvldb/reproducibility
@@ -36,15 +38,15 @@ For details, please see: https://vldb.org/pvldb/reproducibility
 
 + Rename your paper to: <pid>-<contact-author-lastname>.pdf (e.g.: p842-miller.pdf). Mind that there is a "p" in your paper's pid and that the lastname is written in lower case letters.
 
-+ Note that both the title of the paper and the list of authors should be the same as shown in CMT. You need to obtain explicit permission from the Program Committee (PC) chairs of the track that your paper belongs to change the title (the removal of VLDB category tags does not count here) or if you want to change the list of authors on your Camera-Ready paper. Forward the approval email from the PC chairs to pvldb16@gmail.com once you receive it. Note that such requests are not routinely granted.
++ Note that both the title of the paper and the list of authors should be the same as shown in CMT. You need to obtain explicit permission from the Program Committee (PC) chairs of the track that your paper belongs to change the title (the removal of VLDB category tags does not count here) or if you want to change the list of authors on your Camera-Ready paper. Forward the approval email from the PC chairs to pvldbvol20@gmail.com once you receive it. Note that such requests are not routinely granted.
 
 + Note also that adherence to the formatting guidelines is *strict*. This means that you are not allowed to e.g. change any margins, line spacing, or caption whitespace around figures. Papers modifying any such aspect will be returned for reformatting and will miss their publication slot.
 
-+ Prepare the copyright form according to https://vldb.org/pvldb/volumes/16/formatting
++ Prepare the copyright form according to https://vldb.org/pvldb/volumes/20/formatting
   + Download the copyright form, fill in the required information for your paper and sign it. Note that the copyright needs to be signed manually. A computer-written name is not a signature.
   + Choose option A or B from the form for your paper. One and only one option should be selected.
   + Rename your copyright form to: <pid>-<contact-author-lastname>_Copyright.pdf (e.g.: p842-miller_Copyright.pdf)
-  + Email your signed copyright form to us: pvldb16@gmail.com
+  + Email your signed copyright form to us: pvldbvol20@gmail.com
   + Use the ***Track*** and ***Paper ID*** of your paper in the subject line of your email: "Copyright form <ID> <Track>"
 
 + Upload the requested CRC version of your paper to CMT and send your copyright via email *before* the camera-ready deadline expires. Note that if we do not receive all your artifacts by the aforementioned deadline for the first round, the paper cannot be considered for publication for the current Issue.
