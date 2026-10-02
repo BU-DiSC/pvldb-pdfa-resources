@@ -11,6 +11,7 @@ pip3 install PyPDF2
 ```
 
 ## VeraPDF
++ Requires Java Runtime
 + Install veraPDF (for PDF/A compliance check)
     + Create veraPDF directory `mkdir veraPDF; cd veraPDF`
     + Download & install latest stable version of veraPDF using
