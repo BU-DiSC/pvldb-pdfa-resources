@@ -41,7 +41,7 @@ Use `--dir <folder>` to check a different folder, and `-h` to see all options an
 
 If a check fails, [PDFA-how-to.md](PDFA-how-to.md) explains how to fix it. If your paper declares PDF/A-1b and fails, try declaring PDF/A-2b with `\hypersetup{pdfapart=2,pdfaconformance=b}`. PVLDB accepts PDF/A-2, which allows things PDF/A-1 forbids, such as transparency in figures. Then re-run the check.
 
-#### Proposed workflow: check your figures too
+### Proposed workflow: check your figures too
 Font problems often come from a single figure. To find it, check the figures one by one:
 ```
 cp /path/to/paper/figures/*.pdf _testdir/
