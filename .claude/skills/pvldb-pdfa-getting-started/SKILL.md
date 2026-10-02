@@ -22,6 +22,8 @@ This repo helps authors make PVLDB camera-ready papers PDF/A compliant, with all
 
 ## 1. Set up the tools
 
+On macOS (Homebrew), Debian/Ubuntu or Fedora, run `./setup.sh` from the repo root. It installs everything below, puts veraPDF in `_tools/veraPDF`, and skips anything already installed. If the system Python refuses pip installs, it puts PyPDF2 in `.venv` instead, and you then need to run `source .venv/bin/activate` before using the scripts. Use `--skip-system` to skip the package manager. The manual steps below are for other systems or for debugging.
+
 Check what is already installed:
 
 ```sh

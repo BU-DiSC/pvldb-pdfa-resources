@@ -7,17 +7,15 @@ This is a collection of resources started as part of the PVLDB Vol 16 Publicatio
 # Getting started with the tools to check PDF/A compliance
 
 ## Set up the tools
-The checking scripts need Python 3 with PyPDF2, poppler (for `pdffonts`) and veraPDF (which needs Java). More details are in [_tools/INSTALL_TOOLS.md](_tools/INSTALL_TOOLS.md).
+The checking scripts need Python 3 with PyPDF2, poppler (for `pdffonts`) and veraPDF (which needs Java). On macOS (with Homebrew), Debian/Ubuntu or Fedora, one command installs everything:
 
 ```
-pip3 install "PyPDF2>=3"
-brew install poppler            # or: apt install poppler-utils
-
-cd _tools && mkdir -p veraPDF-download && cd veraPDF-download
-curl -LO https://software.verapdf.org/rel/verapdf-installer.zip
-unzip verapdf-installer.zip && cd verapdf-greenfield-*
-./verapdf-install               # choose <repo>/_tools/veraPDF as the installation folder
+./setup.sh
 ```
+
+It asks for your password to install system packages and is safe to re-run. Run `./setup.sh -h` for options.
+
+To install the tools by hand instead, follow [_tools/INSTALL_TOOLS.md](_tools/INSTALL_TOOLS.md).
 
 Check that everything is in place:
 ```
