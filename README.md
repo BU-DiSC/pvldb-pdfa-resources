@@ -41,8 +41,18 @@ Use `--dir <folder>` to check a different folder, and `-h` to see all options an
 
 If a check fails, [PDFA-how-to.md](PDFA-how-to.md) explains how to fix it. If your paper declares PDF/A-1b and fails, try declaring PDF/A-2b with `\hypersetup{pdfapart=2,pdfaconformance=b}`. PVLDB accepts PDF/A-2, which allows things PDF/A-1 forbids, such as transparency in figures. Then re-run the check.
 
-AI coding agents can use the getting-started skill in [.claude/skills/pvldb-pdfa-getting-started/SKILL.md](.claude/skills/pvldb-pdfa-getting-started/SKILL.md), which also covers interpreting and fixing failures.
+### Proposed workflow: check your figures too
+Font problems often come from a single figure. To find it, check the figures one by one:
+```
+cp /path/to/paper/figures/*.pdf _testdir/
+./check_fonts_pdfa.py
+```
+Look for `contains Type 3 fonts` or `has N missing fonts`. For figures, ignore `not a valid PDF/A` and don't run `check_format.py`.
 
 # How to prepare your PDF
 
 [Click here](PDFA-how-to.md) to see a set of advice on how to prepare your PDF so that it is PDF/A compliant.
+
+# AI Agents
+
+AI coding agents can use the getting-started skill in [.claude/skills/pvldb-pdfa-getting-started/SKILL.md](.claude/skills/pvldb-pdfa-getting-started/SKILL.md), which also covers interpreting and fixing failures.
